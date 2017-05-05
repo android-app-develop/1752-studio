@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/saying"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="#E0E0E0"
+	android:orientation="vertical" >
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="48dp"
+		android:background="#7bbfea"
+		android:gravity="center_vertical"
+		android:orientation="horizontal" >
+		<ImageView
+			android:layout_width="48dp"
+			android:layout_height="48dp"
+			android:layout_marginLeft="10dp"
+			android:layout_weight="1"
+			android:clickable="true"
+			android:contentDescription="@string/app_name"
+			android:onClick="openActivity_Main"
+			android:src="@drawable/left1"
+			android:textColor="#FF79BC" >
+		</ImageView>
+		<TextView
+			android:id="@+id/saying_title"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:layout_weight="8"
+			android:clickable="true"
+			android:gravity="center"
+			android:text="歇后语——经典"
+			android:textColor="#ffffffff"
+			android:textSize="20.0dip" />
+		<ImageView
+			android:id="@+id/saying_lovefolder"
+			android:layout_width="48dp"
+			android:layout_height="48dp"
+			android:layout_marginRight="10dp"
+			android:layout_weight="1"
+			android:clickable="true"
+			android:contentDescription="@string/app_name"
+			android:onClick="showLoveSaying"
+			android:src="@drawable/folder_heart"
+			android:textColor="#FF79BC" >
+		</ImageView>
+	</LinearLayout>
+	<LinearLayout
+		android:id="@+id/toolbar"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal" >
+		<ImageView
+			android:id="@+id/saying_share"
+			android:layout_width="30dp"
+			android:layout_height="30dp"
+			android:layout_marginBottom="5dp"
+			android:layout_marginLeft="0dp"
+			android:layout_marginTop="5dp"
+			android:layout_weight="5"
+			android:clickable="true"
+			android:contentDescription="@string/app_name"
+			android:onClick="share"
+			android:src="@drawable/share" >
+		</ImageView>
+		<ImageView
+			android:id="@+id/saying_love"
+			android:layout_width="30dp"
+			android:layout_height="30dp"
+			android:layout_marginBottom="5dp"
+			android:layout_marginLeft="5dp"
+			android:layout_marginRight="0dp"
+			android:layout_marginTop="5dp"
+			android:layout_weight="5"
+			android:clickable="true"
+			android:contentDescription="@string/app_name"
+			android:onClick="love"
+			android:src="@drawable/like" >
+		</ImageView>
+	</LinearLayout>
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="200dp" >
+		<LinearLayout
+			android:id="@+id/left"
+			android:layout_width="42dp"
+			android:layout_height="200dp"
+			android:layout_alignParentLeft="true"
+			android:layout_alignParentStart="true"
+			android:orientation="vertical" >
+			<TextView
+				android:id="@+id/previous"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_vertical"
+				android:layout_marginTop="70dp"
+				android:background="@drawable/left1"
+				android:clickable="true"
+				android:gravity="center"
+				android:onClick="previous"
+				android:textColor="#ffffffff"
+				android:textSize="20.0dip" />
+		</LinearLayout>
+		<LinearLayout
+			android:id="@+id/lanternContent"
+			android:layout_width="fill_parent"
+			android:layout_height="200dp"
+			android:layout_toLeftOf="@+id/right"
+			android:layout_toRightOf="@id/left"
+			android:orientation="vertical" >
+			<TextView
+				android:id="@+id/sayingDes"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:clickable="true"
+				android:gravity="center"
+				android:hint="歇后语"
+				android:longClickable="true"
+				android:onClick="share"
+				android:textColor="#00CED1"
+				android:textSize="20.0dip" />
+		</LinearLayout>
+		<LinearLayout
+			android:id="@+id/right"
+			android:layout_width="42dp"
+			android:layout_height="200dp"
+			android:layout_alignParentEnd="true"
+			android:layout_alignParentRight="true"
+			android:layout_centerVertical="true"
+			android:layout_gravity="center_vertical"
+			android:orientation="vertical" >
+			<TextView
+				android:id="@+id/next"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_vertical"
+				android:layout_marginTop="70dp"
+				android:background="@drawable/right1"
+				android:clickable="true"
+				android:gravity="center"
+				android:onClick="next"
+				android:textColor="#ffffffff"
+				android:textSize="20.0dip" />
+		</LinearLayout>
+	</RelativeLayout>
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="100dp"
+		android:orientation="vertical" >
+		<EditText
+			android:id="@+id/guessKey"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_weight="2"
+			android:gravity="center"
+			android:hint="我猜猜"
+			android:textColor="#00CED1"
+			android:textSize="20.0dip" />
+		<Button
+			android:id="@+id/guess"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:gravity="center"
+			android:onClick="guess"
+			android:text="确定"
+			android:textColor="#ffffffff"
+			android:textSize="20.0dip" />
+	</LinearLayout>
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="100dp"
+		android:layout_gravity="center"
+		android:orientation="vertical" >
+		<TextView
+			android:id="@+id/sayingKey"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:layout_gravity="center"
+			android:clickable="true"
+			android:gravity="center"
+			android:hint="查看答案"
+			android:onClick="key"
+			android:textColor="#00CED1"
+			android:textSize="20.0dip" />
+	</LinearLayout>
+</LinearLayout>

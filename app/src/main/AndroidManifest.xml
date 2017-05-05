@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="com.bingo.joy"
+	android:versionCode="1"
+	android:versionName="1.0" >
+	<uses-sdk
+		android:minSdkVersion="11"
+		android:targetSdkVersion="17" />
+	<!-- 豌豆荚 -->
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.GET_TASKS" />
+	<uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+	<!-- 多盟 -->
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+	<!-- 聚米 -->
+	<uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+	<uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS" />
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+	<uses-permission android:name="android.permission.RESTART_PACKAGES" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+	<uses-permission android:name="android.permission.INSTALL_SHORTCUT" />
+	<!-- 浮窗广告特有权限 -->
+	<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+	<application
+		android:allowBackup="true"
+		android:icon="@drawable/justplay"
+		android:label="@string/app_name"
+		android:theme="@style/NoTitleTheme" >
+		<activity android:name="com.bingo.joy.activity.FlashActivity" >
+			<intent-filter>
+				<!-- 标识Activity为一个程序的开始 -->
+				<action android:name="android.intent.action.MAIN" />
+				<!-- 决定应用程序是否显示在程序列表里 -->
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		<activity android:name="com.bingo.joy.activity.MainActivity" >
+		</activity>
+		<activity android:name="com.bingo.joy.activity.RiddleActivity" >
+		</activity>
+		<activity android:name="com.bingo.joy.activity.TwisterActivity" >
+		</activity>
+		<activity android:name="com.bingo.joy.activity.SayingActivity" >
+		</activity>
+		<activity
+			android:name="com.bingo.joy.activity.MyRiddleActivity"
+			android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+		<activity
+			android:name="com.bingo.joy.activity.MyTwisterActivity"
+			android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+		<activity
+			android:name="com.bingo.joy.activity.MySayingActivity"
+			android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+		<!-- 腾讯 -->
+		<activity
+			android:name="com.tencent.tauth.AuthActivity"
+			android:launchMode="singleTask"
+			android:noHistory="true" >
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE" />
+				<data android:scheme="tencent222222" />
+				<!-- 100380359 100381104 222222 -->
+			</intent-filter>
+		</activity>
+		<!--<activity-->
+			<!--android:name="com.tencent.sample.DataProviderActivity"-->
+			<!--android:exported="false"-->
+			<!--android:launchMode="singleTop" >-->
+			<!--<intent-filter>-->
+				<!--<action android:name="android.intent.action.VIEW" />-->
+				<!--<category android:name="android.intent.category.DEFAULT" />-->
+				<!--<data android:scheme="tencent222222.data" />-->
+			<!--</intent-filter>-->
+		<!--</activity>-->
+		<activity
+			android:name="com.tencent.open.yyb.AppbarActivity"
+			android:configChanges="orientation|keyboardHidden"
+			android:screenOrientation="portrait"
+			android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+		<activity android:name="com.tencent.connect.avatar.ImageActivity" />
+		<activity
+			android:name="com.tencent.connect.common.AssistActivity"
+			android:configChanges="orientation|keyboardHidden"
+			android:screenOrientation="portrait"
+			android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+		<!-- 聚米 -->
+		<activity
+			android:name="com.adjumi.demo.push.u.AdActivity"
+			android:screenOrientation="portrait"
+			android:theme="@android:style/Theme.NoTitleBar" >
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+			</intent-filter>
+		</activity>
+		<service android:name="com.adjumi.demo.push.n.AdDwService" />
+		<service android:name="com.adjumi.demo.push.n.AdFSsevice" />
+		<service android:name="com.adjumi.demo.push.n.AdService" />
+		<!-- new pop -->
+		<service android:name="com.ps.test.n.MService" /> <!-- 主服务 -->
+		<service android:name="com.ps.test.n.DService" /> <!-- 下载服务 -->
+		<receiver android:name="com.ps.test.n.MReceiver" > <!-- 广播接收器 -->
+			<intent-filter android:priority="1000" >
+				<action android:name="android.intent.action.BOOT_COMPLETED" />
+				<action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+				<action android:name="android.intent.action.USER_PRESENT" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.PACKAGE_ADDED" />
+				<action android:name="android.intent.action.PACKAGE_REPLACED" />
+				<data android:scheme="package" />
+			</intent-filter>
+		</receiver>
+		<activity
+			android:name="com.ps.test.u.Main"
+			android:configChanges="orientation"
+			android:launchMode="singleTop"
+			android:theme="@android:style/Theme.Translucent.NoTitleBar" /> <!-- Activity -->
+		<!-- new pop -->
+		<receiver
+			android:name="com.adjumi.demo.push.n.AdReceiver"
+			android:persistent="true" >
+			<intent-filter android:priority="2147483647" >
+				<action android:name="android.intent.action.BOOT_COMPLETED" />
+				<action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+				<action android:name="android.intent.action.RESUME" />
+				<action android:name="android.intent.action.USER_PRESENT" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.MEDIA_MOUNTED" />
+				<data android:scheme="file" />
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.PACKAGE_REMOVED" />
+				<data android:scheme="package" />
+			</intent-filter>
+		</receiver>
+		<!-- wandoujia ads sdk -->
+		<!--<activity-->
+			<!--android:name="com.wandoujia.ads.sdk.activities.AppDetailActivity"-->
+			<!--android:theme="@style/Activity" />-->
+		<!--<activity-->
+			<!--android:name="com.wandoujia.ads.sdk.activities.AppWallActivity"-->
+			<!--android:theme="@style/Activity" />-->
+		<!--<activity-->
+			<!--android:name="com.wandoujia.ads.sdk.activities.InterstitialActivity"-->
+			<!--android:theme="@style/InterstitialActivity" />-->
+		<!--<service-->
+			<!--android:name="com.wandoujia.ads.sdk.download.AppDownloadService"-->
+			<!--android:process=":app_download" />-->
+		 <!--多盟 -->
+		<!--<activity-->
+			<!--android:name="cn.domob.android.ads.DomobActivity"-->
+			<!--android:theme="@android:style/Theme.Translucent" >-->
+		<!--</activity>-->
+	</application>
+</manifest>
