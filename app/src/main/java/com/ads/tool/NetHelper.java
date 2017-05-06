@@ -5,7 +5,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
 public class NetHelper {
-	//ÊÇ·ñÁªÍøÍøÂç  
+	//æ£€æµ‹æ˜¯å¦è”ç½‘  
     public static boolean IsHaveInternet(final Context context) { 
         try { 
             ConnectivityManager manger = (ConnectivityManager) 

@@ -18,10 +18,10 @@ public class AppInstalledUtil {
 	            e.printStackTrace();
 	         }
 	         if(packageInfo ==null){
-	            //System.out.println("没有安装");
+	            //System.out.println("娌℃湁瀹夎");
 	            return false;
 	         }else{
-	            //System.out.println("已经安装");
+	            //System.out.println("宸茬粡瀹夎");
 	            return true;
 	        }
 	}

@@ -24,7 +24,7 @@ public class DBSayingManager {
 		Log.i("test", "DBSayingManager");
 	}
 	
-	// ¸ù¾İsayingDes²éÕÒSayingId
+	// æ ¹æ®sayingDesæŸ¥æ‰¾SayingId
 		public List<Saying> findSayingIdByDes(String sayingDes) {
 			Cursor cursor;
 			List<Saying> list = new ArrayList<Saying>();
@@ -59,7 +59,7 @@ public class DBSayingManager {
 
 		}
 	
-	// ¸ù¾İRemark²éÕÒ
+	// æ ¹æ®RemarkæŸ¥æ‰¾
 		public List<Saying> findSayingsByRemark(String kind) {
 			Cursor cursor;
 			List<Saying> list = new ArrayList<Saying>();
@@ -70,11 +70,11 @@ public class DBSayingManager {
 						.query(TABLE_NAME,
 								null,
 								"sayingRemark=? and sayingKind=?",
-								new String[] { String.valueOf("×î°®"),
+								new String[] { String.valueOf("æœ€çˆ±"),
 										String.valueOf(kind) }, null, null, null);
 			} else {
 				cursor = sdDatabase.query(TABLE_NAME, null, "sayingRemark=?",
-						new String[] { String.valueOf("×î°®") }, null, null, null);
+						new String[] { String.valueOf("æœ€çˆ±") }, null, null, null);
 			}
 
 			if (cursor.getCount() > 0) {
@@ -97,7 +97,7 @@ public class DBSayingManager {
 
 		}
 		
-		// ĞŞ¸Ä
+		// ä¿®æ”¹
 		public boolean update(Saying saying) {
 			ContentValues cValues = new ContentValues();
 
@@ -117,7 +117,7 @@ public class DBSayingManager {
 			}
 		}
 
-	// ¸ù¾İID²éÕÒ
+	// æ ¹æ®IDæŸ¥æ‰¾
 	public Saying findSayingById(int id) {
 		Cursor cursor = sdDatabase.query(TABLE_NAME, null, "sayingId=?",
 				new String[] { String.valueOf(id) }, null, null, null);
@@ -136,7 +136,7 @@ public class DBSayingManager {
 
 	}
 
-	// ¸ù¾İkind²éÕÒ
+	// æ ¹æ®kindæŸ¥æ‰¾
 	public List<Saying> findSayingsByKind(String kind) {
 		Cursor cursor;
 		List<Saying> list = new ArrayList<Saying>();
@@ -170,7 +170,7 @@ public class DBSayingManager {
 
 	}
 
-	// ¸ù¾İID²éÕÒ
+	// æ ¹æ®IDæŸ¥æ‰¾
 	public List<Saying> findSayingsById(int id) {
 		Cursor cursor;
 		List<Saying> list = new ArrayList<Saying>();
@@ -202,7 +202,7 @@ public class DBSayingManager {
 
 	}
 
-	// ¸ù¾İkind²éÕÒ
+	// æ ¹æ®kindæŸ¥æ‰¾
 	public Saying findSayingByKindAndId(String kind, int id) {
 		Cursor cursor;
 		System.out.println("=====kind====" + kind);
@@ -235,7 +235,7 @@ public class DBSayingManager {
 
 	}
 
-	// ¸ù¾İkind²éÕÒ·µ»ØµÆÃÕÌõÊı
+	// æ ¹æ®kindæŸ¥æ‰¾è¿”å›ç¯è°œæ¡æ•°
 	public int findSayingCountByKind(String kind) {
 		Cursor cursor;
 		System.out.println("=====kind====" + kind);
@@ -255,7 +255,7 @@ public class DBSayingManager {
 
 	}
 
-	// ¸ù¾İkind²éÕÒ·µ»ØµÆÃÕÌõÊı
+	// æ ¹æ®kindæŸ¥æ‰¾è¿”å›ç¯è°œæ¡æ•°
 	public int findSayingLastIdByKind(String kind) {
 		Cursor cursor;
 		System.out.println("=====kind====" + kind);
@@ -281,7 +281,7 @@ public class DBSayingManager {
 
 	}
 
-	// °´ÖÖÀà»ñÈ¡ËùÓĞÃ÷Ï¸µÄÁĞ±í
+	// æŒ‰ç§ç±»è·å–æ‰€æœ‰æ˜ç»†çš„åˆ—è¡¨
 	public List<HashMap<String, String>> queryAllByKind(String rKind) {
 		Cursor cursor = sdDatabase.query(TABLE_NAME, null, "sayingKind=?",
 				new String[] { rKind }, null, null, null);
@@ -310,7 +310,7 @@ public class DBSayingManager {
 		sdDatabase.insert(TABLE_NAME, null, cValues);
 	}
 
-	// É¾³ı
+	// åˆ é™¤
 	public boolean delSayingById(int id) {
 		int nt = sdDatabase.delete(TABLE_NAME, "sayingId=?",
 				new String[] { String.valueOf(id) });

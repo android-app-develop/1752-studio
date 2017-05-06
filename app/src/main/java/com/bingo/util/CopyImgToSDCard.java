@@ -13,14 +13,12 @@ public class CopyImgToSDCard {
 
 	public static void CopyImg(Context context, String fileName) {
 		File file = new File(SD_PATH);
-		// ä¸???¨å???»ºï¼???¨å°±è¿??
 		if (!file.exists())
 			file.mkdirs();
 		File copyFile = new File(SD_PATH + fileName);
 		InputStream in = null;
 		OutputStream out = null;
 		try {
-			// ?·å??¾ç?ï¼???¾ç?copy??dcard
 			in = context.getAssets().open(fileName);
 			out = new FileOutputStream(copyFile);
 			byte[] buff = new byte[1024];

@@ -3,9 +3,9 @@ package com.bingo.joy.model;
 public class SortModel {
 
 	private String data; 
-	private String name;   //ÏÔÊ¾µÄÊı¾İ
-	private String key;   //ÏÔÊ¾µÄÊı¾İ
-	private String sortLetters;  //ÏÔÊ¾Êı¾İÆ´ÒôµÄÊ××ÖÄ¸
+	private String name;   //æ˜¾ç¤ºçš„æ•°æ®
+	private String key;   //æ˜¾ç¤ºçš„æ•°æ®
+	private String sortLetters;  //æ˜¾ç¤ºæ•°æ®æ‹¼éŸ³çš„é¦–å­—æ¯
 	
 	/**
 	 * @return the data

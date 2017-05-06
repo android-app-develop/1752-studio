@@ -26,8 +26,8 @@ public class DBHelper extends SQLiteOpenHelper {
 		String sql3 = "create table twister(twisterId integer primary key autoincrement,"
 				+ "twisterDes varchar(255),twisterKey varchar(50),twisterKind varchar(20),twisterRemark varchar(20))";
 
-//		String sql11="delete from riddle";  //Çå¿ÕÊı¾İ
-//		String sql12="update sqlite_sequence SET seq = 0 where name ='riddle'";//×ÔÔö³¤IDÎª0
+//		String sql11="delete from riddle";  //æ¸…ç©ºæ•°æ®
+//		String sql12="update sqlite_sequence SET seq = 0 where name ='riddle'";//è‡ªå¢é•¿IDä¸º0
 
 //		db.execSQL(sql11);
 //		db.execSQL(sql12);

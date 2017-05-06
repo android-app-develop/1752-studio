@@ -25,7 +25,7 @@ public class DBTwisterManager {
 		Log.i("test", "DBProverbManager");
 	}
 	
-	// ¸ù¾İtwisterDes²éÕÒTwisterId
+	// æ ¹æ®twisterDesæŸ¥æ‰¾TwisterId
 			public List<Twister> findTwisterIdByDes(String twisterDes) {
 				Cursor cursor;
 				List<Twister> list = new ArrayList<Twister>();
@@ -60,7 +60,7 @@ public class DBTwisterManager {
 
 			}
 		
-		// ¸ù¾İRemark²éÕÒ
+		// æ ¹æ®RemarkæŸ¥æ‰¾
 			public List<Twister> findTwistersByRemark(String kind) {
 				Cursor cursor;
 				List<Twister> list = new ArrayList<Twister>();
@@ -71,11 +71,11 @@ public class DBTwisterManager {
 							.query(TABLE_NAME,
 									null,
 									"twisterRemark=? and twisterKind=?",
-									new String[] { String.valueOf("×î°®"),
+									new String[] { String.valueOf("æœ€çˆ±"),
 											String.valueOf(kind) }, null, null, null);
 				} else {
 					cursor = sdDatabase.query(TABLE_NAME, null, "twisterRemark=?",
-							new String[] { String.valueOf("×î°®") }, null, null, null);
+							new String[] { String.valueOf("æœ€çˆ±") }, null, null, null);
 				}
 
 				if (cursor.getCount() > 0) {
@@ -98,7 +98,7 @@ public class DBTwisterManager {
 
 			}
 			
-			// ĞŞ¸Ä
+			// ä¿®æ”¹
 			public boolean update(Twister twister) {
 				ContentValues cValues = new ContentValues();
 
@@ -118,7 +118,7 @@ public class DBTwisterManager {
 				}
 			}
 
-	// ¸ù¾İID²éÕÒ
+	// æ ¹æ®IDæŸ¥æ‰¾
 	public Twister findTwisterById(int id) {
 		Cursor cursor = sdDatabase.query(TABLE_NAME, null, "twisterId=?",
 				new String[] { String.valueOf(id) }, null, null, null);
@@ -138,7 +138,7 @@ public class DBTwisterManager {
 
 	}
 
-	// ¸ù¾İkind²éÕÒ
+	// æ ¹æ®kindæŸ¥æ‰¾
 	public List<Twister> findTwistersByKind(String kind) {
 		Cursor cursor;
 		List<Twister> list = new ArrayList<Twister>();
@@ -172,7 +172,7 @@ public class DBTwisterManager {
 
 	}
 
-	// ¸ù¾İID²éÕÒ
+	// æ ¹æ®IDæŸ¥æ‰¾
 	public List<Twister> findTwistersById(int id) {
 		Cursor cursor;
 		List<Twister> list = new ArrayList<Twister>();
@@ -204,7 +204,7 @@ public class DBTwisterManager {
 
 	}
 
-	// ¸ù¾İkind²éÕÒ
+	// æ ¹æ®kindæŸ¥æ‰¾
 	public Twister findTwisterByKindAndId(String kind, int id) {
 		Cursor cursor;
 		System.out.println("=====kind====" + kind);
@@ -237,7 +237,7 @@ public class DBTwisterManager {
 
 	}
 
-	// ¸ù¾İkind²éÕÒ·µ»ØµÆÃÕÌõÊı
+	// æ ¹æ®kindæŸ¥æ‰¾è¿”å›ç¯è°œæ¡æ•°
 	public int findTwisterCountByKind(String kind) {
 		Cursor cursor;
 		System.out.println("=====kind====" + kind);
@@ -257,7 +257,7 @@ public class DBTwisterManager {
 
 	}
 
-	// ¸ù¾İkind²éÕÒ·µ»ØµÆÃÕÌõÊı
+	// æ ¹æ®kindæŸ¥æ‰¾è¿”å›ç¯è°œæ¡æ•°
 	public int findTwisterLastIdByKind(String kind) {
 		Cursor cursor;
 		System.out.println("=====kind====" + kind);
@@ -283,7 +283,7 @@ public class DBTwisterManager {
 
 	}
 
-	// °´ÖÖÀà»ñÈ¡ËùÓĞÃ÷Ï¸µÄÁĞ±í
+	// æŒ‰ç§ç±»è·å–æ‰€æœ‰æ˜ç»†çš„åˆ—è¡¨
 	public List<HashMap<String, String>> queryAllByKind(String rKind) {
 		Cursor cursor = sdDatabase.query(TABLE_NAME, null, "twisterKind=?",
 				new String[] { rKind }, null, null, null);
@@ -313,7 +313,7 @@ public class DBTwisterManager {
 	}
 
 	/**
-	 * µÚ¶şÖÖ·½Ê½ÅúÁ¿²åÈë(²åÈë1WÌõÊı¾İºÄÊ±£º1365ms)
+	 * ç¬¬äºŒç§æ–¹å¼æ‰¹é‡æ’å…¥(æ’å…¥1Wæ¡æ•°æ®è€—æ—¶ï¼š1365ms)
 	 * 
 	 * @param openHelper
 	 * @param list
@@ -358,7 +358,7 @@ public class DBTwisterManager {
 		return true;
 	}
 
-	// É¾³ı
+	// åˆ é™¤
 	public boolean deltTwisterById(int id) {
 		int nt = sdDatabase.delete(TABLE_NAME, "twisterId=?",
 				new String[] { String.valueOf(id) });

@@ -27,7 +27,7 @@ public class DBRiddleManager {
 		Log.i("test", "DBRiddleManager");
 	}
 
-	// ¸ù¾İID²éÕÒ
+	// æ ¹æ®IDæŸ¥æ‰¾
 	public Riddle findRiddleById(int id) {
 		Cursor cursor = sdDatabase.query(TABLE_NAME, null, "riddleId=?",
 				new String[] { String.valueOf(id) }, null, null, null);
@@ -46,7 +46,7 @@ public class DBRiddleManager {
 
 	}
 
-	// ¸ù¾İkind²éÕÒ
+	// æ ¹æ®kindæŸ¥æ‰¾
 	public List<Riddle> findRiddlesByKind(String kind) {
 		Cursor cursor;
 		List<Riddle> list = new ArrayList<Riddle>();
@@ -80,7 +80,7 @@ public class DBRiddleManager {
 
 	}
 
-	// ¸ù¾İID²éÕÒ
+	// æ ¹æ®IDæŸ¥æ‰¾
 	public List<Riddle> findRiddlesById(int id) {
 		Cursor cursor;
 		List<Riddle> list = new ArrayList<Riddle>();
@@ -112,7 +112,7 @@ public class DBRiddleManager {
 
 	}
 
-	// ¸ù¾İkind²éÕÒ
+	// æ ¹æ®kindæŸ¥æ‰¾
 	public Riddle findRiddleByKindAndId(String kind, int id) {
 		Cursor cursor;
 		System.out.println("=====kind====" + kind);
@@ -145,7 +145,7 @@ public class DBRiddleManager {
 
 	}
 
-	// ¸ù¾İkind²éÕÒ·µ»ØµÆÃÕÌõÊı
+	// æ ¹æ®kindæŸ¥æ‰¾è¿”å›ç¯è°œæ¡æ•°
 	public int findRiddleCountByKind(String kind) {
 		Cursor cursor;
 		System.out.println("=====kind====" + kind);
@@ -165,7 +165,7 @@ public class DBRiddleManager {
 
 	}
 
-	// ¸ù¾İkind²éÕÒ·µ»ØµÆÃÕÌõÊı
+	// æ ¹æ®kindæŸ¥æ‰¾è¿”å›ç¯è°œæ¡æ•°
 	public int findRiddleLastIdByKind(String kind) {
 		Cursor cursor;
 		System.out.println("=====kind====" + kind);
@@ -191,7 +191,7 @@ public class DBRiddleManager {
 
 	}
 
-	// ¸ù¾İriddleDes²éÕÒRiddleId
+	// æ ¹æ®riddleDesæŸ¥æ‰¾RiddleId
 	public List<Riddle> findRiddleIdByDes(String riddleDes) {
 		Cursor cursor;
 		List<Riddle> list = new ArrayList<Riddle>();
@@ -226,7 +226,7 @@ public class DBRiddleManager {
 
 	}
 
-	// ¸ù¾İRemark²éÕÒ
+	// æ ¹æ®RemarkæŸ¥æ‰¾
 	public List<Riddle> findRiddlesByRemark(String kind) {
 		Cursor cursor;
 		List<Riddle> list = new ArrayList<Riddle>();
@@ -237,11 +237,11 @@ public class DBRiddleManager {
 					.query(TABLE_NAME,
 							null,
 							"riddleRemark=? and riddleKind=?",
-							new String[] { String.valueOf("×î°®"),
+							new String[] { String.valueOf("æœ€çˆ±"),
 									String.valueOf(kind) }, null, null, null);
 		} else {
 			cursor = sdDatabase.query(TABLE_NAME, null, "riddleRemark=?",
-					new String[] { String.valueOf("×î°®") }, null, null, null);
+					new String[] { String.valueOf("æœ€çˆ±") }, null, null, null);
 		}
 
 		if (cursor.getCount() > 0) {
@@ -264,7 +264,7 @@ public class DBRiddleManager {
 
 	}
 
-	// °´ÖÖÀà»ñÈ¡ËùÓĞÃ÷Ï¸µÄÁĞ±í
+	// æŒ‰ç§ç±»è·å–æ‰€æœ‰æ˜ç»†çš„åˆ—è¡¨
 	public List<HashMap<String, String>> queryAllByKind(String rKind) {
 		Cursor cursor = sdDatabase.query(TABLE_NAME, null, "riddleKind=?",
 				new String[] { rKind }, null, null, null);
@@ -293,14 +293,14 @@ public class DBRiddleManager {
 		sdDatabase.insert(TABLE_NAME, null, cValues);
 	}
 
-	// É¾³ı
+	// åˆ é™¤
 	public boolean delRiddleById(int id) {
 		int nt = sdDatabase.delete(TABLE_NAME, "riddleId=?",
 				new String[] { String.valueOf(id) });
 		return nt > 0 ? true : false;
 	}
 
-	// ĞŞ¸Ä
+	// ä¿®æ”¹
 	public boolean update(Riddle riddle) {
 		ContentValues cValues = new ContentValues();
 

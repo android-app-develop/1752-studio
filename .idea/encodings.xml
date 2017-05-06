@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/ads/tool/NetHelper.java" charset="GB2312" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/bingo/joy/activity/ClearEditText.java" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/ads/tool/NetHelper.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/bingo/joy/activity/ClearEditText.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/bingo/joy/adapter/SortAdapter.java" charset="GB2312" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/bingo/joy/db/DBHelper.java" charset="GB2312" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/bingo/joy/model/SortModel.java" charset="GB2312" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/bingo/joy/netutil/HttpUtil.java" charset="GB2312" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/bingo/joy/view/SideBar.java" charset="GB2312" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/bingo/util/AppInstalledUtil.java" charset="GB2312" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/bingo/util/CharacterParser.java" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/bingo/joy/db/DBHelper.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/bingo/joy/db/DBRiddleManager.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/bingo/joy/db/DBSayingManager.java" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/bingo/joy/db/DBTwisterManager.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/bingo/joy/model/SortModel.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/bingo/joy/netutil/HttpUtil.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/bingo/joy/view/SideBar.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/bingo/util/AppInstalledUtil.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/bingo/util/CharacterParser.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/bingo/util/CopyImgToSDCard.java" charset="GB2312" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/bingo/util/MyDialog.java" charset="GB2312" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/wechat/tool/WeChatConstants.java" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/bingo/util/MyDialog.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/wechat/tool/WeChatConstants.java" charset="UTF-8" />
   </component>
 </project>

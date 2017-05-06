@@ -20,7 +20,7 @@ import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
 /**
  * Description:
- * <br/>ÍøÕ¾: <a href="http://www.crazyit.org">·è¿ñavaÁªÃË</a>
+ * <br/>ç½‘ç«™: <a href="http://www.crazyit.org">ç–¯ç‹‚avaè”ç›Ÿ</a>
  * <br/>Copyright (C), 2001-2014, Yeeku.H.Lee
  * <br/>This program is protected by copyright laws.
  * <br/>Program Name:
@@ -30,13 +30,13 @@ import org.apache.http.util.EntityUtils;
  */
 public class HttpUtil 
 {
-	// ´´½¨HttpClient¶ÔÏó
+	// åˆ›å»ºHttpClientå¯¹è±¡
 	public static HttpClient httpClient = new DefaultHttpClient();
 	public static final String BASE_URL =
 		"http://192.168.0.101:8080/LanternRiddlesMIS/";
 	/***.
-	 * @param url ·¢ËÍÇëÇóµÄURL
-	 * @return ·şÎñÆ÷ÏìÓ¦×Ö·û´®
+	 * @param url å‘é€è¯·æ±‚çš„URL
+	 * @return æœåŠ¡å™¨å“åº”å­—ç¬¦ä¸²
 	 * @throws Exception
 	 */
 	
@@ -50,17 +50,17 @@ public class HttpUtil
 			@Override
 			public String call() throws Exception
 			{
-				// ´´½¨HttpGet¶ÔÏó¡£
+				// åˆ›å»ºHttpGetå¯¹è±¡ã€‚
 				HttpGet get = new HttpGet(url);
 				System.out.println("---------HttpGet");
-				// ·¢ËÍGETÇëÇó
+				// å‘é€GETè¯·æ±‚
 				HttpResponse httpResponse = httpClient.execute(get);
 				System.out.println("---------httpGet  Response");
-				// Èç¹û·şÎñÆ÷³É¹¦µØ·µ»ØÏìÓ¦
+				// å¦‚æœæœåŠ¡å™¨æˆåŠŸåœ°è¿”å›å“åº”
 				if (httpResponse.getStatusLine()
 					.getStatusCode() == 200)
 				{
-					// »ñÈ¡·şÎñÆ÷ÏìÓ¦×Ö·û´®
+					// è·å–æœåŠ¡å™¨å“åº”å­—ç¬¦ä¸²
 					String result = EntityUtils
 						.toString(httpResponse.getEntity());
 					return result;
@@ -73,9 +73,9 @@ public class HttpUtil
 	}
 
 	/**
-	 * @param url ·¢ËÍÇëÇóµÄURL
-	 * @param params ÇëÇó²ÎÊı
-	 * @return ·şÎñÆ÷ÏìÓ¦×Ö·û´®
+	 * @param url å‘é€è¯·æ±‚çš„URL
+	 * @param params è¯·æ±‚å‚æ•°
+	 * @return æœåŠ¡å™¨å“åº”å­—ç¬¦ä¸²
 	 * @throws Exception
 	 */
 	public static String postRequest(final String url
@@ -87,29 +87,29 @@ public class HttpUtil
 			@Override
 			public String call() throws Exception
 			{
-				// ´´½¨HttpPost¶ÔÏó¡£
+				// åˆ›å»ºHttpPostå¯¹è±¡ã€‚
 				HttpPost post = new HttpPost(url);
-				// Èç¹û´«µİ²ÎÊı¸öÊı±È½Ï¶àµÄ»°¿ÉÒÔ¶Ô´«µİµÄ²ÎÊı½øĞĞ·â×°
+				// å¦‚æœä¼ é€’å‚æ•°ä¸ªæ•°æ¯”è¾ƒå¤šçš„è¯å¯ä»¥å¯¹ä¼ é€’çš„å‚æ•°è¿›è¡Œå°è£…
 				List<NameValuePair> params = 
 					new ArrayList<NameValuePair>();
 				for(String key : rawParams.keySet())
 				{
-					//·â×°ÇëÇó²ÎÊı
+					//å°è£…è¯·æ±‚å‚æ•°
 					params.add(new BasicNameValuePair(key 
 						, rawParams.get(key)));
 				}
-				// ÉèÖÃÇëÇó²ÎÊı
+				// è®¾ç½®è¯·æ±‚å‚æ•°
 				post.setEntity(new UrlEncodedFormEntity(
 					params, "utf-8"));
 				System.out.println("---------httpPOST");
-				// ·¢ËÍPOSTÇëÇó
+				// å‘é€POSTè¯·æ±‚
 				HttpResponse httpResponse = httpClient.execute(post);
 				System.out.println("---------httpPOST  Response");
-				// Èç¹û·şÎñÆ÷³É¹¦µØ·µ»ØÏìÓ¦
+				// å¦‚æœæœåŠ¡å™¨æˆåŠŸåœ°è¿”å›å“åº”
 				if (httpResponse.getStatusLine()
 					.getStatusCode() == 200)
 				{
-					// »ñÈ¡·şÎñÆ÷ÏìÓ¦×Ö·û´®
+					// è·å–æœåŠ¡å™¨å“åº”å­—ç¬¦ä¸²
 					String result = EntityUtils
 						.toString(httpResponse.getEntity());
 					return result;

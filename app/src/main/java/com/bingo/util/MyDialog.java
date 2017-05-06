@@ -11,7 +11,7 @@ public class MyDialog {
 
 		final AlertDialog dialog = new AlertDialog.Builder(activity,
 				R.style.CustomAlertDialog).create();
-		// adRef.setTitle("Ã· æ");
+		// adRef.setTitle("ÊèêÁ§∫");
 		dialog.setMessage(message);
 		dialog.show();
 

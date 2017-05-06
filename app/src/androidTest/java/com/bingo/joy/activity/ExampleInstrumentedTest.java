@@ -1,4 +1,4 @@
-package com.bingo.joy.a1752;
+package com.bingo.joy.activity;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

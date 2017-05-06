@@ -17,18 +17,18 @@ import com.bingo.joy.R;
 
 public class ClearEditText extends EditText implements  
         OnFocusChangeListener, TextWatcher { 
-	/**
-	 * É¾³ý°´Å¥µÄÒýÓÃ
-	 */
+    /**
+     * åˆ é™¤æŒ‰é’®çš„å¼•ç”¨
+     */
     private Drawable mClearDrawable; 
  
     public ClearEditText(Context context) { 
-    	this(context, null); 
+        this(context, null); 
     } 
  
     public ClearEditText(Context context, AttributeSet attrs) { 
-    	//ÕâÀï¹¹Ôì·½·¨Ò²ºÜÖØÒª£¬²»¼ÓÕâ¸öºÜ¶àÊôÐÔ²»ÄÜÔÙXMLÀïÃæ¶¨Òå
-    	this(context, attrs, android.R.attr.editTextStyle); 
+        //è¿™é‡Œæž„é€ æ–¹æ³•ä¹Ÿå¾ˆé‡è¦ï¼Œä¸åŠ è¿™ä¸ªå¾ˆå¤šå±žæ€§ä¸èƒ½å†XMLé‡Œé¢å®šä¹‰
+        this(context, attrs, android.R.attr.editTextStyle); 
     } 
     
     public ClearEditText(Context context, AttributeSet attrs, int defStyle) {
@@ -38,10 +38,10 @@ public class ClearEditText extends EditText implements
     
     
     private void init() { 
-    	//»ñÈ¡EditTextµÄDrawableRight,¼ÙÈçÃ»ÓÐÉèÖÃÎÒÃÇ¾ÍÊ¹ÓÃÄ¬ÈÏµÄÍ¼Æ¬
-    	mClearDrawable = getCompoundDrawables()[2]; 
+        //èŽ·å–EditTextçš„DrawableRight,å‡å¦‚æ²¡æœ‰è®¾ç½®æˆ‘ä»¬å°±ä½¿ç”¨é»˜è®¤çš„å›¾ç‰‡
+        mClearDrawable = getCompoundDrawables()[2]; 
         if (mClearDrawable == null) { 
-        	mClearDrawable = getResources() 
+            mClearDrawable = getResources() 
                     .getDrawable(R.drawable.emotionstore_progresscancelbtn); 
         } 
         mClearDrawable.setBounds(0, 0, mClearDrawable.getIntrinsicWidth(), mClearDrawable.getIntrinsicHeight()); 
@@ -52,15 +52,15 @@ public class ClearEditText extends EditText implements
  
  
     /**
-     * ÒòÎªÎÒÃÇ²»ÄÜÖ±½Ó¸øEditTextÉèÖÃµã»÷ÊÂ¼þ£¬ËùÒÔÎÒÃÇÓÃ¼Ç×¡ÎÒÃÇ°´ÏÂµÄÎ»ÖÃÀ´Ä£Äâµã»÷ÊÂ¼þ
-     * µ±ÎÒÃÇ°´ÏÂµÄÎ»ÖÃ ÔÚ  EditTextµÄ¿í¶È - Í¼±êµ½¿Ø¼þÓÒ±ßµÄ¼ä¾à - Í¼±êµÄ¿í¶È  ºÍ
-     * EditTextµÄ¿í¶È - Í¼±êµ½¿Ø¼þÓÒ±ßµÄ¼ä¾àÖ®¼äÎÒÃÇ¾ÍËãµã»÷ÁËÍ¼±ê£¬ÊúÖ±·½ÏòÃ»ÓÐ¿¼ÂÇ
+     * å› ä¸ºæˆ‘ä»¬ä¸èƒ½ç›´æŽ¥ç»™EditTextè®¾ç½®ç‚¹å‡»äº‹ä»¶ï¼Œæ‰€ä»¥æˆ‘ä»¬ç”¨è®°ä½æˆ‘ä»¬æŒ‰ä¸‹çš„ä½ç½®æ¥æ¨¡æ‹Ÿç‚¹å‡»äº‹ä»¶
+     * å½“æˆ‘ä»¬æŒ‰ä¸‹çš„ä½ç½® åœ¨  EditTextçš„å®½åº¦ - å›¾æ ‡åˆ°æŽ§ä»¶å³è¾¹çš„é—´è· - å›¾æ ‡çš„å®½åº¦  å’Œ
+     * EditTextçš„å®½åº¦ - å›¾æ ‡åˆ°æŽ§ä»¶å³è¾¹çš„é—´è·ä¹‹é—´æˆ‘ä»¬å°±ç®—ç‚¹å‡»äº†å›¾æ ‡ï¼Œç«–ç›´æ–¹å‘æ²¡æœ‰è€ƒè™‘
      */
     @Override 
     public boolean onTouchEvent(MotionEvent event) { 
         if (getCompoundDrawables()[2] != null) { 
             if (event.getAction() == MotionEvent.ACTION_UP) { 
-            	boolean touchable = event.getX() > (getWidth() 
+                boolean touchable = event.getX() > (getWidth() 
                         - getPaddingRight() - mClearDrawable.getIntrinsicWidth()) 
                         && (event.getX() < ((getWidth() - getPaddingRight())));
                 if (touchable) { 
@@ -74,7 +74,7 @@ public class ClearEditText extends EditText implements
     } 
  
     /**
-     * µ±ClearEditText½¹µã·¢Éú±ä»¯µÄÊ±ºò£¬ÅÐ¶ÏÀïÃæ×Ö·û´®³¤¶ÈÉèÖÃÇå³ýÍ¼±êµÄÏÔÊ¾ÓëÒþ²Ø
+     * å½“ClearEditTextç„¦ç‚¹å‘ç”Ÿå˜åŒ–çš„æ—¶å€™ï¼Œåˆ¤æ–­é‡Œé¢å­—ç¬¦ä¸²é•¿åº¦è®¾ç½®æ¸…é™¤å›¾æ ‡çš„æ˜¾ç¤ºä¸Žéšè—
      */
     @Override 
     public void onFocusChange(View v, boolean hasFocus) { 
@@ -87,7 +87,7 @@ public class ClearEditText extends EditText implements
  
  
     /**
-     * ÉèÖÃÇå³ýÍ¼±êµÄÏÔÊ¾ÓëÒþ²Ø£¬µ÷ÓÃsetCompoundDrawablesÎªEditText»æÖÆÉÏÈ¥
+     * è®¾ç½®æ¸…é™¤å›¾æ ‡çš„æ˜¾ç¤ºä¸Žéšè—ï¼Œè°ƒç”¨setCompoundDrawablesä¸ºEditTextç»˜åˆ¶ä¸ŠåŽ»
      * @param visible
      */
     protected void setClearIconVisible(boolean visible) { 
@@ -98,7 +98,7 @@ public class ClearEditText extends EditText implements
      
     
     /**
-     * µ±ÊäÈë¿òÀïÃæÄÚÈÝ·¢Éú±ä»¯µÄÊ±ºò»Øµ÷µÄ·½·¨
+     * å½“è¾“å…¥æ¡†é‡Œé¢å†…å®¹å‘ç”Ÿå˜åŒ–çš„æ—¶å€™å›žè°ƒçš„æ–¹æ³•
      */
     @Override 
     public void onTextChanged(CharSequence s, int start, int count, 
@@ -119,23 +119,23 @@ public class ClearEditText extends EditText implements
     
    
     /**
-     * ÉèÖÃ»Î¶¯¶¯»­
+     * è®¾ç½®æ™ƒåŠ¨åŠ¨ç”»
      */
     public void setShakeAnimation(){
-    	this.setAnimation(shakeAnimation(5));
+        this.setAnimation(shakeAnimation(5));
     }
     
     
     /**
-     * »Î¶¯¶¯»­
-     * @param counts 1ÃëÖÓ»Î¶¯¶àÉÙÏÂ
+     * æ™ƒåŠ¨åŠ¨ç”»
+     * @param counts 1ç§’é’Ÿæ™ƒåŠ¨å¤šå°‘ä¸‹
      * @return
      */
     public static Animation shakeAnimation(int counts){
-    	Animation translateAnimation = new TranslateAnimation(0, 10, 0, 0);
-    	translateAnimation.setInterpolator(new CycleInterpolator(counts));
-    	translateAnimation.setDuration(1000);
-    	return translateAnimation;
+        Animation translateAnimation = new TranslateAnimation(0, 10, 0, 0);
+        translateAnimation.setInterpolator(new CycleInterpolator(counts));
+        translateAnimation.setDuration(1000);
+        return translateAnimation;
     }
  
  

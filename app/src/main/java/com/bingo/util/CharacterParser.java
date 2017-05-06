@@ -1,13 +1,13 @@
 /*
  * Filename	CharacterParser.java
- * Company	ÉÏº£ÀÖÎÊ-ÆÖ¶«·Ö¹«Ë¾¡£
+ * Company	ä¸Šæµ·ä¹é—®-æµ¦ä¸œåˆ†å…¬å¸ã€‚
  * @author	LuRuihui
  * @version	0.1
  */
 package com.bingo.util;
 
 /**
- * Javaºº×Ö×ª»»ÎªÆ´Òô
+ * Javaæ±‰å­—è½¬æ¢ä¸ºæ‹¼éŸ³
  * 
  */
 public class CharacterParser {
@@ -73,7 +73,7 @@ public class CharacterParser {
 		this.resource = resource;
 	}
 
-	/** * ºº×Ö×ª³ÉASCIIÂë * * @param chs * @return */
+	/** * æ±‰å­—è½¬æˆASCIIç  * * @param chs * @return */
 	private int getChsAscii(String chs) {
 		int asc = 0;
 		try {
@@ -95,7 +95,7 @@ public class CharacterParser {
 		return asc;
 	}
 
-	/** * µ¥×Ö½âÎö * * @param str * @return */
+	/** * å•å­—è§£æ * * @param str * @return */
 	public String convert(String str) {
 		String result = null;
 		int ascii = getChsAscii(str);
@@ -112,7 +112,7 @@ public class CharacterParser {
 		return result;
 	}
 
-	/** * ´Ê×é½âÎö * * @param chs * @return */
+	/** * è¯ç»„è§£æ * * @param chs * @return */
 	public String getSelling(String chs) {
 		String key, value;
 		buffer = new StringBuilder();
