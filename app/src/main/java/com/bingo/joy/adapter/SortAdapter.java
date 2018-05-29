@@ -29,6 +29,7 @@ public class SortAdapter extends BaseAdapter implements SectionIndexer {
 	 */
 	public void updateListView(List<SortModel> list) {
 		this.list = list;
+		if(!this.list.isEmpty()){}
 		notifyDataSetChanged();
 	}
 
