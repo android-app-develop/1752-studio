@@ -5,7 +5,7 @@
 https://v.qq.com/x/page/v0500q3ibu0.html
 
 ### 项目地址：
-https://github.com/Alex-0407/1752-studio
+https://github.com/artdong/1752-studio
 
 ### 新浪云活动
 
@@ -17,8 +17,8 @@ https://github.com/Alex-0407/1752-studio
 
 * 扫一扫下面的二维码或者搜索"全栈弄潮儿"
 
-<img src="https://github.com/Alex-0407/sinacloud-node/blob/master/fullstack-8cm.jpg" width="320px" style="display:inline;">
+<img src="https://github.com/artdong/sinacloud-node/blob/master/fullstack-8cm.jpg" width="320px" style="display:inline;">
 
 ### 扫一扫下载`1752`app
 
-<img src="https://github.com/Alex-0407/1752-studio/blob/master/app/src/main/assets/1752.jpg" width="320px" style="display:inline;">
+<img src="https://github.com/artdong/1752-studio/blob/master/app/src/main/assets/1752.jpg" width="320px" style="display:inline;">
